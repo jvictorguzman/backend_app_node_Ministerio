@@ -1,5 +1,21 @@
+import express from "express"
 
-import http from "http"; // nueva forma de javascript moderna con ES
-//const http = require("http") // forma antigua de trabajar en javascript
+//importar modulos locales
+import { Route } from './router'
 
-console.log("Hola Mundo");
+// variables auxiliares
+const PORT = process.env.PORT || 3000
+
+// iniciar la app con express
+const app = express()
+
+// para cargar archivos estaticos 
+app.use(express.static('public'))
+
+// habilitar rutas
+app.use('/api', Route)
+
+// levantar un servidor
+app.listen(PORT, () => {
+  console.log(`Servidor levantado en http://127.0.0.1:${PORT}`)
+})

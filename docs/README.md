@@ -25,7 +25,7 @@ module.exports = {
 ```
 npx sequelize-cli init
 ```
-
+# Comandos de GIT 
 ## Descargar e Instalar GIT 
 
 - Para configurar agregar usuario y correo 
@@ -33,7 +33,7 @@ npx sequelize-cli init
 git config --global user.name "nombre"
 git config --global user.email "micorreo@mail.com"
 ```
-- Inicializar crear un nuevo repositorio local
+- Inicializar crear un nuevo repositorio local o clonar
 ```
 git init
 ```
@@ -57,5 +57,14 @@ git remote add origin https://github.com/jvictorguzman/backend_app_node_Minister
 ## Para agregar todos los archivos
 
 ```
+git add .
+```
+## Para agregar o registrar los cambios agregamos un mensaje (commit)
+```
+git commit -m "mensaje o descripcion"
+```
 
+## Para subir todos lo cambios al repositorio remoto
+```
+git push -u origin master
 ```
